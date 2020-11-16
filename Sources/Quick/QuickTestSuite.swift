@@ -1,6 +1,6 @@
 #if canImport(Darwin)
 
-import XCTest
+import Foundation
 
 /**
  This protocol defines the role of an object that builds test suites.
@@ -20,7 +20,7 @@ internal protocol QuickTestSuiteBuilder {
  A base class for a class cluster of Quick test suites, that should correctly
  build dynamic test suites for XCTest to execute.
  */
-public class QuickTestSuite: XCTestSuite {
+public class QuickTestSuite: XCTestModuleXCTestSuite {
 
     private static var builtTestSuites: Set<String> = Set()
 
